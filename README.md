@@ -1,43 +1,49 @@
-# CleanFrame · Samsung S93D OLED
+# CleanFrame · Samsung S95B · TV Comedor
 
-A personal TV launcher adapted for the **Samsung TQ48S93DAEXXC (48-inch S93D OLED)**, based on [nthnclrk/CleanFrame](https://github.com/nthnclrk/CleanFrame). The TV interface is in Spanish. Documentation and screenshot captions are available in both languages.
+Personal launcher for the **Samsung QE65S95BATXXC**, 65-inch S95B OLED (2022), adapted from [nthnclrk/CleanFrame](https://github.com/nthnclrk/CleanFrame). Spanish UI, English/Spanish guides and screenshots.
 
-Un menú personal para la **Samsung TQ48S93DAEXXC (S93D OLED de 48 pulgadas)**, basado en CleanFrame. Interfaz en español; documentación y pies de captura en español e inglés.
+Menú personal para la **Samsung QE65S95BATXXC**, S95B OLED de 65 pulgadas (2022). Interfaz en español, guías y explicaciones de capturas en ambos idiomas.
 
-**[English guide](docs/bedroom/README.en.md) · [Guía en español](docs/bedroom/README.es.md)**
+**[English guide](docs/comedor/README.en.md) · [Guía en español](docs/comedor/README.es.md)**
 
-[Project record / Registro del proyecto](docs/bedroom/PROJECT.md) · [Screenshots / Capturas](docs/bedroom/SCREENSHOTS.md) · [Upstream README](README.upstream.md)
+[Project record / Registro](docs/comedor/PROJECT.md) · [Screenshots / Capturas](docs/comedor/SCREENSHOTS.md) · [Upstream README](README.upstream.md)
 
-![Night launcher / Menú nocturno](docs/images/bedroom/home-night.jpg)
+![TV Comedor night preview / Vista previa nocturna](docs/images/comedor/home-night.jpg)
+
+## Confirmed configuration / Configuración confirmada
+
+Samsung QE65S95BATXXC · firmware **T-PTMDEUC-1720.7** · **Tizen 6.5, ARMv7 / 32-bit**.
+
+- Power-on shows broadcast TV; physical Home opens TV Comedor. The owner confirmed the requested power-on/Home test. / Al encender aparece la TDT; Casa abre TV Comedor. El propietario confirmó la prueba solicitada.
+- Start with Smart Hub and Autorun Last App were reported disabled in the TV menu. Home routing is configured separately. / En el menú se dejaron desactivadas Iniciar con Smart Hub e Iniciar última aplicación. La asignación de Casa se configura por separado.
+- This is evidence for this TV/firmware, not a guarantee for other models, every power state or future firmware. / La evidencia corresponde a esta TV/firmware; otros modelos, estados o actualizaciones requieren pruebas.
 
 ## Features / Funciones
 
-- Installed TV apps only, with a configurable, reorderable carousel. / Solo aplicaciones instaladas, con carrusel configurable y ordenable.
-- HDMI shortcuts with editable names and monochrome Steam, Nintendo Switch and PS5 icons. / Accesos HDMI con nombres editables e iconos monocromos.
-- Live TV preview, scrollable channel list, tuning and optional carousel shortcut. / TDT con vista previa, lista desplazable, cambio de canal y acceso opcional en el carrusel.
-- Separate launcher customization and Samsung quick settings. / Personalización del menú y ajustes rápidos de Samsung separados.
-- 24-hour clock and weekday; consistent focus and visible Back/Home controls. / Hora de 24 horas, día de la semana y controles visibles para volver e ir a inicio.
-- 22 backgrounds in 11 day/night pairs, with design masters and generation prompts. / 22 fondos en 11 parejas día/noche, con originales y descripciones de generación.
+- Installed apps, HDMI and optional Live TV shortcuts in a reorderable carousel, with no application-imposed maximum. / Apps instaladas, HDMI y TDT opcional en un carrusel ordenable sin máximo impuesto por la app.
+- Scrolling order editor, saved preferences, Back/Home controls. / Editor desplazable, preferencias guardadas y controles Volver/Inicio.
+- Monochrome Crunchyroll, SmartTV Club and Twitch, plus other platform and console marks. / Logos monocromos de Crunchyroll, SmartTV Club y Twitch, entre otras plataformas y consolas.
+- Editable HDMI names/icons; launcher settings separate from Samsung quick settings. / Nombres e iconos HDMI editables; personalización separada de ajustes Samsung.
+- Live TV preview and channel list: focus previews, OK/click tunes and opens full-screen; separate full-screen button retained. / Lista y vista previa de TDT: recorrer previsualiza, OK/clic sintoniza y abre pantalla completa; se conserva el botón independiente.
+- 24-hour clock with weekday; 22 backgrounds in 11 day/night pairs, with selected masters and prompts. / Hora de 24 horas con día de la semana; 22 fondos en 11 parejas día/noche, con originales y descripciones.
 
 ## Preview / Vista previa
 
-Requires Node.js 22.13+ or 24+, Python 3.10+, and npm. / Requiere Node.js 22.13+ o 24+, Python 3.10+ y npm.
+Node.js 22.13+ or 24+, Python 3.10+ and npm:
 
 ```sh
-git clone https://github.com/pettersdark/Samsung-TQ48S93DAEXXC-CleanFrame.git
-cd Samsung-TQ48S93DAEXXC-CleanFrame
+git clone https://github.com/pettersdark/Samsung-QE65S95BATXXC-CleanFrame.git
+cd Samsung-QE65S95BATXXC-CleanFrame
 npm ci
 python scripts/preview.py --public-fonts
 ```
 
-On macOS/Linux, use `python3` if needed. Open http://localhost:4795/home/. Use arrows, Enter and Escape. Actual TV actions require a compatible TV. / En macOS/Linux usa `python3` si corresponde. Abre la dirección anterior; usa flechas, Intro y Escape. Las funciones del televisor requieren una TV compatible.
+Open http://localhost:4795/home/. Arrows, Enter and Escape mirror remote controls. Use `python3` where required. Real TV actions require hardware. / Abre esa dirección y usa flechas, Intro y Escape. Usa `python3` si corresponde; las acciones de TV requieren el dispositivo real.
 
-## Installation and limits / Instalación y límites
+## Maintenance and privacy / Mantenimiento y privacidad
 
-Read the language guide before installing. Use your own Samsung developer certificates and SDK-generated app identity. This repository contains source, assets and documentation, without personal keys, signed packages or device recovery state. Native Home/startup integration is a separate, firmware-specific operation; **always opening this launcher at power-on is not guaranteed**.
+Start with the language guide and project record. Older bedroom/upstream documents remain historical references, not S95B compatibility claims. Original SDK identity, certificates, passwords, network addresses, signed widgets and recovery state are private and excluded from Git. Native Home source templates use placeholders and are not an unattended installer.
 
-Lee la guía antes de instalar. Usa certificados de desarrollador propios y una identidad de aplicación generada por el SDK. El repositorio contiene código, recursos y documentación; excluye claves personales, paquetes firmados y datos de recuperación. La integración con Inicio y el arranque depende del firmware; **no se garantiza que este menú aparezca siempre al encender**.
+Consulta la guía y el registro antes de modificar. Los documentos antiguos del dormitorio/proyecto original son referencias históricas. Identidad del SDK, certificados, contraseñas, direcciones de red, paquetes firmados y recuperación quedan privados y fuera de Git. Las plantillas de Inicio usan ejemplos y no son un instalador automático.
 
-## Credits and licences / Créditos y licencias
-
-CleanFrame by Nathan Clark and contributors; bedroom adaptation for pettersdark. Preserve [LICENSE](LICENSE) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Brand logos retain their owners' rights. Generated wallpaper provenance is recorded in `app/assets/wallpapers/SOURCES.json`; prompts and selected masters are in `design/backgrounds/`. No Samsung or platform endorsement is claimed.
+Retain [LICENSE](LICENSE) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Brand owners retain their rights; no endorsement is claimed. / Conserva las licencias y avisos; las marcas pertenecen a sus propietarios.
