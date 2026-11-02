@@ -156,3 +156,9 @@ TV en directo aparece como acceso interno opcional en Añadir y ordenar. No se i
 Abrirlo desde el carrusel usa exactamente la misma vista integrada de TV en directo que el control superior, con listado de canales y pantalla completa; nunca lanza tv.live como ID de aplicación del sistema. El icono original representa un televisor con antena, reproducción y punto de emisión, siguiendo la tinta monocroma del tema.
 
 La colección Series v3 añade Maratón de series, Estudio de guion y Rincón de streaming en día y noche, sin personajes ni imágenes de series. El catálogo total contiene veintidós fondos; el selector conserva el desplazamiento y permite llegar a la última imagen con el mando.
+
+### Explicit channel activation opens full-screen TV
+
+Moving remote focus through the channel list retains preview tuning after the existing delay. Hover alone never opens full-screen. Pressing OK or clicking a channel tunes that channel and opens the native full-screen TV viewer only after successful tuning. The independent Ver a pantalla completa button remains available. A failed tune retains the list and its error; cancelled or superseded requests cannot trigger a late handoff.
+
+Al recorrer la lista se conserva la sintonización de vista previa con su espera habitual. Pasar el puntero o mover el foco no abre pantalla completa. Pulsar OK o hacer clic sintoniza ese canal y abre el visor completo después de confirmar la sintonización. Se conserva Ver a pantalla completa. Los errores permanecen visibles y las peticiones canceladas o sustituidas no provocan aperturas tardías.

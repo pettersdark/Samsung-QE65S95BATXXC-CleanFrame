@@ -2141,7 +2141,7 @@
 
   /* Bedroom owner controls: real installed apps and live TV. */
   var liveDialog = document.getElementById('liveTVDialog'), liveStatus = document.getElementById('liveTVStatus');
-  var liveChannels = document.getElementById('liveTVChannels'), liveSequence = 0, channelTimer = 0;
+  var liveChannels = document.getElementById('liveTVChannels'), liveSequence = 0, liveTuneSequence = 0, channelTimer = 0;
   function ownerDialogOpen() { return liveDialog && !liveDialog.hidden; }
   function seedInstalledCatalog() {
     var saved = load(), seed = window.CleanFrameInstalledApps || [], records = saved && saved.appRecords;
@@ -2160,9 +2160,17 @@
     ensureLiveShortcut();
   }
   function closeLiveTV(then) {
-    liveSequence++; clearTimeout(channelTimer); liveDialog.hidden = true;
+    liveSequence++; liveTuneSequence++; clearTimeout(channelTimer); liveDialog.hidden = true;
     FrameDevice.hidePreview(function (err) { if (then) then(err); });
     focusStage(); after();
+  }
+  function fullscreenLiveTV() {
+    var sequence = liveSequence + 1;
+    closeLiveTV(function (err) {
+      if (sequence !== liveSequence || !liveDialog.hidden) return;
+      if (err) { message('TV en directo', err.message || 'No se pudo cerrar la vista previa.'); return; }
+      perform('TV en directo', FrameDevice.liveTV);
+    });
   }
   function loadLiveChannels(sequence) {
     var listStatus = document.getElementById('liveTVListStatus'), count = document.getElementById('liveTVCount');
@@ -2179,21 +2187,23 @@
         number.className = 'live-tv-channel-number'; number.textContent = String(channel.major);
         label.className = 'live-tv-channel-name'; label.textContent = channel.channelName || channel.serviceName || 'Canal ' + channel.major;
         button.appendChild(number); button.appendChild(label); shown++;
-        function selectChannel() {
+        function selectChannel(fullscreen) {
+          var tuneSequence = ++liveTuneSequence;
           FrameDevice.tuneChannel(channel, function (tuneError) {
-            if (sequence !== liveSequence || liveDialog.hidden) return;
+            if (sequence !== liveSequence || tuneSequence !== liveTuneSequence || liveDialog.hidden) return;
             liveStatus.textContent = tuneError ? tuneError.message : label.textContent;
             if (!tuneError) {
               Array.prototype.forEach.call(liveChannels.querySelectorAll('button'), function (item) { item.setAttribute('aria-pressed', String(item === button)); });
+              if (fullscreen) fullscreenLiveTV();
             }
           });
         }
-        button.addEventListener('click', function () { clearTimeout(channelTimer); selectChannel(); });
+        button.addEventListener('click', function () { clearTimeout(channelTimer); selectChannel(true); });
         button.addEventListener('focus', function () {
-          clearTimeout(channelTimer);
+          liveTuneSequence++; clearTimeout(channelTimer);
           if (button.offsetTop < liveChannels.scrollTop) liveChannels.scrollTop = button.offsetTop;
           if (button.offsetTop + button.offsetHeight > liveChannels.scrollTop + liveChannels.clientHeight) liveChannels.scrollTop = button.offsetTop + button.offsetHeight - liveChannels.clientHeight;
-          channelTimer = setTimeout(selectChannel, 650);
+          channelTimer = setTimeout(function () { selectChannel(false); }, 650);
         });
         liveChannels.appendChild(button);
       });
@@ -2217,7 +2227,7 @@
   }
   document.getElementById('liveTVRetry').addEventListener('click', function () { clearTimeout(channelTimer); loadLiveChannels(liveSequence); });
   document.getElementById('liveTVClose').addEventListener('click', function () { closeLiveTV(); });
-  document.getElementById('liveTVFullscreen').addEventListener('click', function () { closeLiveTV(function () { perform('TV en directo', FrameDevice.liveTV); }); });
+  document.getElementById('liveTVFullscreen').addEventListener('click', fullscreenLiveTV);
   function handleOwnerDialogKey(event) {
     if (!ownerDialogOpen()) return false;
     var dialog = liveDialog, code = event.keyCode;

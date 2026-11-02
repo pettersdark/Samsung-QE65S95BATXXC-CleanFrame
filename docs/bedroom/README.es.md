@@ -20,7 +20,7 @@ La interfaz está en español. Traducir la documentación no cambia el idioma de
 
 - **Personalizar** abre los ajustes de nuestro menú; **Ajustes TV** abre los ajustes rápidos de Samsung.
 - En **Personalizar → Aplicaciones**, añade o elimina accesos y cambia el orden del carrusel. Usa Mover, elige la posición y guarda; puedes cancelar el movimiento.
-- **TV en directo** también se puede añadir al carrusel. La lista de canales se desplaza verticalmente y las consultas se realizan en bloques de hasta 15. Selecciona un canal para sintonizarlo o entra en pantalla completa.
+- **TV en directo** también se puede añadir al carrusel. La lista de canales se desplaza verticalmente y las consultas se realizan en bloques de hasta 15. Recorre la lista para previsualizar; pulsa OK o haz clic en un canal para sintonizarlo y verlo a pantalla completa. También se conserva el botón Ver a pantalla completa.
 - **Entradas** muestra las fuentes HDMI. Puedes añadirlas al carrusel.
 - En **Personalizar → Entradas HDMI**, selecciona el puerto, cambia su nombre o elige su icono. Confirma con Guardar; Cancelar conserva el valor anterior. El nombre no altera el puerto físico.
 - Los nombres editados dentro de Samsung no se sincronizan en tiempo real mediante la API pública usada aquí. Para nuevos nombres utiliza el editor de la aplicación.
@@ -38,7 +38,7 @@ La interfaz está en español. Traducir la documentación no cambia el idioma de
 
 Los scripts originales de firma, instalación e integración nativa contienen supuestos del equipo de referencia y algunos usan herramientas POSIX. **No son un instalador automático para Windows.** El `.wgt` público sin firmar sirve para inspección, y no sustituye la firma con tus certificados. No se incluye el paquete personal firmado.
 
-Instalar la app y sustituir Inicio son operaciones distintas. La opción Samsung de abrir la última app puede restaurar Netflix o YouTube. En esta TV el arranque fijo no quedó garantizado tras todos los estados de espera. No ejecutes los ayudantes nativos de otro modelo sin revisar sus protecciones y guardar una copia exacta de los valores originales. Restaura los valores originales antes de desinstalar una integración nativa o cambiar su identidad.
+Instalar la app y sustituir Inicio son operaciones distintas. La opción Samsung de abrir la última app puede restaurar Netflix o YouTube. El propietario confirmó el arranque con Iniciar con Smart Hub activado e Iniciar última aplicación desactivado, conservando nuestra asignación nativa de Inicio. Otros estados y futuros firmwares siguen sin verificar. No ejecutes los ayudantes nativos de otro modelo sin revisar sus protecciones y guardar una copia exacta de los valores originales. Restaura los valores originales antes de desinstalar una integración nativa o cambiar su identidad.
 
 ## Comprobaciones y futuras mejoras
 

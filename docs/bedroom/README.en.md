@@ -20,7 +20,7 @@ The application interface is Spanish. English documentation does not add an Engl
 
 - **Personalizar** customizes this launcher; **Ajustes TV** opens Samsung quick settings.
 - Under **Personalizar → Aplicaciones**, add/remove shortcuts and reorder the carousel. Select Mover, choose the position and save it; a move can be cancelled.
-- **TV en directo** (Live TV) can also be added to the carousel. The channel list scrolls vertically; channel queries use batches of at most 15. Select a channel to tune or enter full-screen TV.
+- **TV en directo** (Live TV) can also be added to the carousel. The channel list scrolls vertically; channel queries use batches of at most 15. Browse to preview; press OK or click a channel to tune it and open full-screen TV. The separate Ver a pantalla completa button remains available.
 - **Entradas** lists HDMI sources, which can be added to the carousel.
 - Under **Personalizar → Entradas HDMI**, select a port to rename it or choose its icon. Guardar saves; Cancelar keeps the previous value. A custom name never changes the physical source mapping.
 - Samsung's internal source names are not synchronized live through the public API used here. Use the launcher's name editor for new names.
@@ -38,7 +38,7 @@ The application interface is Spanish. English documentation does not add an Engl
 
 Upstream signing, installation and native integration tools retain reference-machine assumptions and some depend on POSIX utilities. **They are not an unattended Windows installer.** The public unsigned `.wgt` is for inspection and still requires your own signing process. Personal signed packages are excluded.
 
-App installation and native Home replacement are separate operations. Samsung's last-app option may restore Netflix or YouTube. Consistent launcher startup across all standby states was not established on this TV. Do not run native helpers for another model without reviewing their guards and saving the exact original recovery values. Restore those values before uninstalling native integration or changing its app identity.
+App installation and native Home replacement are separate operations. Samsung's last-app option may restore Netflix or YouTube. The owner confirmed launcher startup with Start with Smart Hub enabled and Autorun Last App disabled, retaining the custom native Home and home-app assignment. Other power states and future firmware remain unverified. Do not run native helpers for another model without reviewing their guards and saving the exact original recovery values. Restore those values before uninstalling native integration or changing its app identity.
 
 ## Checks and future changes
 

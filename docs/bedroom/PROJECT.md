@@ -42,3 +42,19 @@ Git excluye `.local/`, `dist/`, certificados, contraseñas y recuperación. La i
 On 2 November 2026, ESLint, widget/resource validation, all 22 simulated device-adapter tests, the current bedroom browser regression suite (Edge), public-source scanning and the unsigned public-font export passed. The browser checks use mocked Tizen APIs. Native Windows cannot run the inherited POSIX tooling tests; the Linux GitHub workflow includes them. Hosted workflow results must be checked separately after pushing.
 
 El 2 de noviembre de 2026 pasaron ESLint, validación de recursos, los 22 tests del adaptador simulado, las pruebas actuales de navegador en Edge, el escaneo de publicación y la exportación sin firmar con fuentes públicas. Windows no puede ejecutar directamente los tests POSIX heredados; están incluidos en el flujo Linux de GitHub. Su resultado remoto debe comprobarse después de subir.
+
+## Channel activation update / Actualización de selección de canales · 2026-11-02
+
+Pressing OK or clicking a channel now tunes it and opens the native full-screen TV viewer after successful tuning. Moving remote focus retains preview tuning; hover never opens full-screen. The separate full-screen button remains available. Failed tuning stays in the list, and stale/cancelled requests cannot trigger a later handoff. The owner confirmed the update after installation on both TVs and authorized publication.
+
+Pulsar OK o hacer clic en un canal lo sintoniza y abre el visor a pantalla completa tras confirmar la sintonización. Mover el foco conserva la vista previa; pasar el puntero no abre pantalla completa. Se conserva el botón independiente. Los errores dejan la lista abierta y las peticiones canceladas o sustituidas no abren el visor después. El propietario confirmó el funcionamiento tras instalar en ambas TVs y autorizó la publicación.
+
+Validation: ES5 lint, resource checks, simulated adapter tests, and browser checks at 1080p/720p covering focus versus activation, explicit full-screen button, tune errors, superseded requests, Back and delayed preview cleanup. Personal signing, device identities and recovery records remain excluded from Git.
+
+Validación: sintaxis ES5, recursos, adaptador simulado y navegador a 1080p/720p, incluyendo foco frente a pulsación, botón independiente, errores de sintonización, peticiones sustituidas, Volver y limpieza tardía de la vista previa. Firma personal, identidades y recuperación quedan fuera de Git.
+
+## Bedroom startup follow-up / Seguimiento del arranque del dormitorio · 2026-11-02
+
+The earlier power-on limitation was resolved in the owner's controlled test by enabling **Start with Smart Hub** and disabling **Autorun Last App**, while preserving the custom native Home and home-app assignment. The two options are distinct. The owner confirmed that our launcher appeared on power-on with tuned broadcast channels retained. This supersedes the earlier pending/failed startup observations for that configuration; it does not guarantee every power state or future firmware. Original and repair-state recovery snapshots remain private and unchanged.
+
+La prueba controlada del propietario resolvió el arranque activando **Iniciar con Smart Hub** y desactivando **Iniciar última aplicación**, conservando la asignación nativa de Inicio y nuestra app de inicio. Son opciones distintas. El propietario confirmó que apareció nuestro menú al encender, manteniendo los canales sintonizados. Este resultado actualiza las observaciones anteriores de fallo o prueba pendiente para esa configuración; no garantiza todos los estados ni futuros firmwares. Los originales de recuperación y reparación siguen privados y sin sobrescribir.

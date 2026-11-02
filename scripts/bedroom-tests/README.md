@@ -10,6 +10,7 @@ node scripts/bedroom-tests/hdmi-name-review.cjs
 node scripts/bedroom-tests/v12-focus-review.cjs
 node scripts/bedroom-tests/v13-review.cjs
 node scripts/bedroom-tests/live-card-review.cjs
+node scripts/bedroom-tests/live-channel-fullscreen.cjs
 node scripts/bedroom-tests/series-gallery.cjs
 ```
 
