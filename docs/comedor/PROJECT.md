@@ -1,3 +1,15 @@
+> Release 1.1 (version metadata 1.1.0): [changes / cambios](../releases/1.1.md). Owner-confirmed menus, spacing and materials; native Home/startup preserved.
+
+> Wallpaper update 2026-11-03: seven packages / 52 images replace the previous
+> gallery. Time and weekday now share one line. The owner confirmed the app and
+> seven packages on this TV. ES5/resources, 27 unit/synthetic tests and full-pack
+> browser checks passed. Model-specific device adapter, identity, author, fonts
+> and native Home/startup behavior are preserved. [Details](../wallpaper-packs.md).
+>
+> Actualización 2026-11-03: siete paquetes / 52 fondos sustituyen la galería anterior.
+> Hora y día en una línea; app y siete paquetes confirmados por el propietario.
+> Versión publicada como release 1.1; consultar docs/releases/1.1.md.
+
 # TV Comedor · S95B
 
 Samsung QE65S95BATXXC, S95B OLED de 65 pulgadas (2022). Firmware fotografiado T-PTMDEUC-1720.7. SDB confirmó Tizen 6.5, ARMv7 y 32 bits el 2 de noviembre de 2026. Conexión conseguida desde el PC original después de la prueba desde el portátil y de volver a la dirección de red por cable. No se ha aislado la causa del rechazo inicial.

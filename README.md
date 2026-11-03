@@ -1,5 +1,7 @@
 # CleanFrame · Samsung S95B · TV Comedor
 
+**Release 1.1 — [Cambios en español / English changes](docs/releases/1.1.md)**
+
 Personal launcher for the **Samsung QE65S95BATXXC**, 65-inch S95B OLED (2022), adapted from [nthnclrk/CleanFrame](https://github.com/nthnclrk/CleanFrame). Spanish UI, English/Spanish guides and screenshots.
 
 Menú personal para la **Samsung QE65S95BATXXC**, S95B OLED de 65 pulgadas (2022). Interfaz en español, guías y explicaciones de capturas en ambos idiomas.
@@ -8,7 +10,7 @@ Menú personal para la **Samsung QE65S95BATXXC**, S95B OLED de 65 pulgadas (2022
 
 [Project record / Registro](docs/comedor/PROJECT.md) · [Screenshots / Capturas](docs/comedor/SCREENSHOTS.md) · [Upstream README](README.upstream.md)
 
-![TV Comedor night preview / Vista previa nocturna](docs/images/comedor/home-night.jpg)
+![TV Comedor night preview / Vista previa nocturna](docs/images/comedor/release-1.1-night.jpg)
 
 ## Confirmed configuration / Configuración confirmada
 
@@ -25,7 +27,7 @@ Samsung QE65S95BATXXC · firmware **T-PTMDEUC-1720.7** · **Tizen 6.5, ARMv7 / 3
 - Monochrome Crunchyroll, SmartTV Club and Twitch, plus other platform and console marks. / Logos monocromos de Crunchyroll, SmartTV Club y Twitch, entre otras plataformas y consolas.
 - Editable HDMI names/icons; launcher settings separate from Samsung quick settings. / Nombres e iconos HDMI editables; personalización separada de ajustes Samsung.
 - Live TV preview and channel list: focus previews, OK/click tunes and opens full-screen; separate full-screen button retained. / Lista y vista previa de TDT: recorrer previsualiza, OK/clic sintoniza y abre pantalla completa; se conserva el botón independiente.
-- 24-hour clock with weekday; 22 backgrounds in 11 day/night pairs, with selected masters and prompts. / Hora de 24 horas con día de la semana; 22 fondos en 11 parejas día/noche, con originales y descripciones.
+- 24-hour clock with weekday; 52 backgrounds in seven packages (26 day/night pairs), with selected masters and prompts. / Hora de 24 horas con día de la semana; 52 fondos en siete paquetes (26 parejas día/noche), con originales y descripciones.
 
 ## Preview / Vista previa
 
@@ -47,3 +49,17 @@ Start with the language guide and project record. Older bedroom/upstream documen
 Consulta la guía y el registro antes de modificar. Los documentos antiguos del dormitorio/proyecto original son referencias históricas. Identidad del SDK, certificados, contraseñas, direcciones de red, paquetes firmados y recuperación quedan privados y fuera de Git. Las plantillas de Inicio usan ejemplos y no son un instalador automático.
 
 Retain [LICENSE](LICENSE) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). Brand owners retain their rights; no endorsement is claimed. / Conserva las licencias y avisos; las marcas pertenecen a sus propietarios.
+
+## Wallpaper packages and inline clock / Paquetes y reloj en una línea
+
+This update replaces the previous gallery with seven offline packages / 52 images.
+Package selection, scene rotation and automatic day/night timing are in
+Personalizar → Fondo. The 24-hour time and weekday share one line. Existing
+Home/startup behavior is preserved for this model.
+
+Esta actualización sustituye la galería anterior por siete paquetes / 52 fondos.
+En Personalizar → Fondo se elige paquete, escena, rotación y horario día/noche.
+Hora y día van en una línea. Se conserva el comportamiento de Casa y arranque.
+[Behavior and validation / Uso y pruebas](docs/wallpaper-packs.md).
+
+![Seven wallpaper packages / Siete paquetes de fondos](docs/images/comedor/wallpaper-packages.jpg)
