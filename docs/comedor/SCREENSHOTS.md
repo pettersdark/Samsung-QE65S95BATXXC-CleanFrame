@@ -27,3 +27,11 @@ Move, remove, undo and save carousel positions using the remote. Long saved list
 Mueve, quita, deshaz y guarda posiciones con el mando. Las listas largas se desplazan en la columna izquierda; no hay límite de nueve impuesto por la app.
 
 ![Order editor / Editor de orden](../images/comedor/editor.jpg)
+
+## Release 1.2 / Versión 1.2
+
+Shared browser previews with sample data. / Vistas previas compartidas con datos de ejemplo.
+
+![Guide / Guía](../images/comedor/release-1.2-guide.jpg)
+![Night guide / Guía de noche](../images/comedor/release-1.2-guide-night.jpg)
+![Live information / Información en directo](../images/comedor/release-1.2-live.jpg)
